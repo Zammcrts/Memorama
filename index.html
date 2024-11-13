@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Memoria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Memorama</h1>
+
+    <!-- Pantalla de inicio -->
+    <div id="start-screen">
+        <label for="player-name">Nombre del jugador:</label>
+        <input type="text" id="player-name" placeholder="Ingresa tu nombre">
+
+        <label for="card-count">Número de cartas:</label>
+        <select id="card-count">
+            <option value="8">8</option>
+            <option value="16">16</option>
+            <option value="24">24</option>
+            <option value="36">36</option>
+            <option value="48">48</option>
+        </select>
+
+        <button id="start-button">Iniciar juego</button>
+    </div>
+
+    <!-- Pantalla del juego -->
+    <div id="game-screen" style="display: none;">
+        <h2 id="game-title"></h2>
+        <div>Intentos: <span id="attempts-counter">0</span></div>
+        <div>Pares encontrados: <span id="pairs-counter">0</span></div>
+        <div>Tiempo: <span id="timer">00:00</span></div>
+        <button id="reset-button">Reiniciar juego</button>
+        <button id="new-game-button">Nueva partida</button>
+        <div id="game-board" class="board"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

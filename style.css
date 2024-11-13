@@ -1,0 +1,117 @@
+/* style.css */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Century Gothic';
+    background-color: #ebeae6;
+}
+
+.board {
+    display: grid;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #7A4183;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: rgb(214, 209, 209);
+    cursor: pointer;
+    perspective: 1000px; /* Agrega profundidad a la transformación */
+  }
+  
+  .card.flipped {
+    background-color: #EAD3E2;
+    color: #7A4183;
+    cursor: default;
+    transform-style: preserve-3d; /* Preserva el estilo 3D */
+    transition: transform 0.5s; /* Suaviza la transición */
+    transform: rotateY(180deg); /* Voltea la tarjeta 180 grados */
+  }
+  
+  .card.hidden {
+    opacity: 0; /* Oculta la tarjeta gradualmente */
+    transition: opacity 0.5s; /* Suaviza la transición de ocultación */
+  }
+
+.hidden {
+    visibility: hidden;
+}
+
+#start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Aumenta la separación entre elementos */
+    background-color: #8D6E97; /* Color de fondo */
+    padding: 40px; /* Aumenta el espacio interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    color: white; /* Color del texto */
+    width: 50%; /* Ajusta el ancho a un 50% del ancho de la ventana */
+    max-width: 500px; /* Limita el ancho máximo del cuadro */
+    min-height: 100px; /* Ajusta la altura mínima para mayor tamaño */
+    margin-top: 0px; /* Margen superior */
+    font-size: 1.5em; /* Aumenta el tamaño de la fuente */
+}
+
+#start-button {
+    background-color: #FFAA4D; /* Color de fondo inicial */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    font-size: 1em; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave al cambiar de color */
+}
+
+#start-button:hover {
+    background-color: #9F5CC0; /* Color de fondo al pasar el cursor */
+}
+
+h1 {
+    font-size: 4em; /* Ajusta el tamaño de la fuente */
+    margin: 20px 0; /* Añade un poco de espacio arriba y abajo */
+    color: #7A4183; /* Cambia el color si deseas que combine con el tema */
+    text-align: center; /* Centra el texto */
+}
+
+#reset-button{
+    background-color: #FFAA4D; /* Color de fondo inicial */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    font-size: 1em; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave al cambiar de color */
+
+}
+
+#reset-button:hover {
+    background-color: #9F5CC0; /* Color de fondo al pasar el cursor */
+}
+
+#new-game-button {
+    background-color: #FFAA4D; /* Color de fondo inicial */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    font-size: 1em; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s; /* Transición suave al cambiar de color */
+    margin-top: 10px; /* Espacio superior */
+}
+
+#new-game-button:hover {
+    background-color: #9F5CC0; /* Color de fondo al pasar el cursor */
+}
